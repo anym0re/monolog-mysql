@@ -27,7 +27,7 @@ class MysqlHandler extends AbstractProcessingHandler
 //            'channel'     => $record['channel'],
             'level'       => $record['level'],
             'request'     => $record['message'],
-            'context'     => $record['context'],
+            'context'     => json_encode($record['context'],JSON_UNESCAPED_UNICODE),
 //            'level_name'  => $record['level_name'],
 //            'remote_addr' => isset($_SERVER['REMOTE_ADDR'])     ? ip2long($_SERVER['REMOTE_ADDR']) : null,
 //            'user_agent'  => isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT']      : null,
