@@ -17,8 +17,8 @@ class CreateApiLogsTable extends Migration
 
                 $table->bigIncrements('id');
                 $table->smallInteger('level')->index();
-                $table->longText('request')->index();
-                $table->text('context')->index();
+                $table->longText('request');
+                $table->text('context');
                 $table->unsignedInteger('created_by')->nullable()->index();
                 $table->dateTime('created_at')->index();
             }
